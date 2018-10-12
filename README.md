@@ -1,6 +1,14 @@
 # Generate self-signed HTTPS/SSL cert
 
-Satisfy Chromium/Chrome 58+ strict requirements for self-signed HTTPS/SSL cert
+Satisfy Chromium/Chrome 58+ strict requirements for self-signed HTTPS/SSL cert.
+It resolve all errors such as :point_down:
+
+```
+Subject Alternative Name Missing.
+This site is missing a valid, trusted certificate (net::ERR_CERT_COMMON_NAME_INVALID).
+This site is missing a valid, trusted certificate (net::ERR_CERT_AUTHORITY_INVALID).
+...
+```
 
 ## Step 1
 
