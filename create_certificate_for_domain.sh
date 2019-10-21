@@ -18,7 +18,7 @@ fi
 
 # Create a new private key if one doesnt exist, or use the xeisting one if it does
 DOMAIN=$1
-NUM_OF_DAYS=999
+NUM_OF_DAYS=3650
 
 openssl req -new -sha256 -nodes -out server/server.csr -newkey rsa:2048 -keyout server/server.key -config rootCA.csr.cnf
 cat v3.ext | sed s/%%DOMAIN%%/"$DOMAIN"/g > /tmp/__v3.ext
@@ -33,8 +33,8 @@ echo
 echo "###########################################################################"
 echo Done!
 echo "###########################################################################"
-echo "To use these files on your server, simply copy both certs/$DOMAIN.csr and"
-echo "server/server.key to your webserver, and use like so (if Apache, for example)"
-echo
-echo "    SSLCertificateFile    /path_to_your_files/$DOMAIN.crt"
-echo "    SSLCertificateKeyFile /path_to_your_files/server.key"
+#echo "To use these files on your server, simply copy both certs/$DOMAIN.csr and"
+#echo "server/$DOMAIN.key to your webserver, and use like so (if Apache, for example)"
+#echo
+#echo "    SSLCertificateFile    /path_to_your_files/$DOMAIN.crt"
+#echo "    SSLCertificateKeyFile /path_to_your_files/$DOMAIN.key"
